@@ -153,7 +153,6 @@
     "parseurl": "^1.3.3",
     "path-is-absolute": "^1.0.1",
     "path-to-regexp": "^0.1.7",
-    "prisma": "^5.2.0",
     "process-nextick-args": "^2.0.1",
     "proxy-addr": "^2.0.7",
     "q": "^1.5.1",
