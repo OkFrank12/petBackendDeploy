@@ -21,6 +21,19 @@ app.use("/api", studentRouter_1.default);
 app.use("/api", bagRouter_1.default);
 app.use("/api", feeRouter_1.default);
 app.use((0, morgan_1.default)("dev"));
+app.get("/", (req, res) => {
+    try {
+        return res.status(200).json({
+            message: "Welcome to Franklin's PET project API",
+        });
+    }
+    catch (error) {
+        return res.status(404).json({
+            message: "error message",
+            data: error.message,
+        });
+    }
+});
 app.listen(process.env.PORT || port, () => {
     mongoose_1.default.connect(mongoURL).then(() => {
         console.log(`My MongoDB database is connected ${mongoose_1.default.connection.host}`);
